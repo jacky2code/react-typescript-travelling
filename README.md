@@ -57,4 +57,48 @@ npx create-react-app react-ts-travelling --template typescript
   import React from 'react';
   ```
 
+- CSS module setting
+
+  Create custom.d.ts file in src folder and declare css
+
+  ```typescript
+  // CSS 声明    
+  declare module "*.css" {
+      const css: { [key: string]: string };
+      export default css;
+  }
+  ```
+
+  Chang all the *.css name to *.module.css
+
+  Use css module like this:
+
+  ```tsx
+  import styles from './App.module.css';
+  ```
+
+  Install css module dependencies for dev
+
+  ```bash
+  npm install typescript-plugin-css-modules --save-dev
+  ```
+
+  Check the package.json
+
+  ```json
+  "devDependencies": {
+    "typescript-plugin-css-modules": "^4.1.1"
+  }
+  ```
+
+  Setting this module in tsconfig.json
+
+  ```json
+  "plugins": [
+    {
+      "name": "typescript-plugin-css-modules"
+    }
+  ]
+  ```
+
   
