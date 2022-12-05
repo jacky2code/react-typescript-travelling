@@ -2,7 +2,7 @@
  * @Author: GKing
  * @Date: 2022-12-05 17:13:34
  * @LastEditors: GKing
- * @LastEditTime: 2022-12-05 21:02:34
+ * @LastEditTime: 2022-12-05 21:30:28
  * @Description: 
  * @TODO: 
  */
@@ -17,7 +17,7 @@ function App() {
     <div className={styles.app}>
       <div className={styles.appHeader}>
         <img src={logo} className={styles.appLogo} alt='logo'/>
-        <h1>React-Typescript-Traveling</h1>
+        <h1>React-Typescript-Travelling</h1>
       </div>
       <div className={styles.robotList}>
         {robots.map((r) => (

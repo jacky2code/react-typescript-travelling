@@ -45,4 +45,16 @@ npx create-react-app react-ts-travelling --template typescript
   }
   ```
 
+- Old react-javascript project exchange to react-typescript project
+
+  ```bash
+  npm install --save typescript @types/node @types/react @types/react-dom @types/jest
+  ```
+
+  Change all the .js file to .tsx file, and import React 
+
+  ```tsx
+  import React from 'react';
+  ```
+
   
