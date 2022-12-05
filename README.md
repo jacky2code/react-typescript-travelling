@@ -1,46 +1,48 @@
-# Getting Started with Create React App
+# React-Typtscript-Travelling
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## React with Typescript
 
-## Available Scripts
+Create react project with typescript like this:
 
-In the project directory, you can run:
+```bash
+npx create-react-app react-ts-travelling --template typescript
+```
 
-### `npm start`
+- tsconfig.json introduction
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  ```json
+  {
+    "compilerOptions": {
+      "noImplicitAny": false, //不需要显式的声明变量的类型 any
+      "target": "es5", // 编译后的目标 JS 版本
+      "lib": [
+        "dom",
+        "dom.iterable",
+        "esnext"
+      ],
+      "allowJs": true, // 允许混合编译 JS 文件
+      "skipLibCheck": true,
+      "esModuleInterop": true, // 允许使用 commonJs 的方式 import 默认文件
+      "allowSyntheticDefaultImports": true,
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "noFallthroughCasesInSwitch": true,
+      "module": "esnext", // 配置代码的模块系统
+      "moduleResolution": "node", // 编译器工作方式，import json 文件必须打开下面2项
+      "resolveJsonModule": true,
+      "isolatedModules": true, // 编译器将每个文件作为单独的模块使用
+      "noEmit": true, // 发生错误时，编译器不要生成 JS 代码
+      "jsx": "react", // 允许编译器支持编译的 react 代码
+      "plugins": [
+        {
+          "name": "typescript-plugin-css-modules"
+        }
+      ]
+    },
+    "include": [
+      "src"
+    ]
+  }
+  ```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+  
