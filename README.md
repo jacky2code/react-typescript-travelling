@@ -101,4 +101,15 @@ npx create-react-app react-ts-travelling --template typescript
   ]
   ```
 
+- Setting VSCode for Typescript code hits
+
+  Create .vscode folder int the project root folder and add the settings.json file
+
+  ```json
+  {
+      "typescript.tsdk": "node_modules/typescript/lib",
+      "typescript.enablePromptUseWorkspaceTsdk": true
+  }
+  ```
+
   
