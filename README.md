@@ -57,6 +57,12 @@ npx create-react-app react-ts-travelling --template typescript
   import React from 'react';
   ```
 
+
+
+## Thinking in React
+
+Modules in React
+
 - CSS module setting
 
   Create custom.d.ts file in src folder and declare css
@@ -111,5 +117,35 @@ npx create-react-app react-ts-travelling --template typescript
       "typescript.enablePromptUseWorkspaceTsdk": true
   }
   ```
+
+- Load assets such as images, icons, and fonts
+
+  add assets folder in src folder, include images, icons and fonts
+
+  Font-face the font file in index.css
+
+  ```css
+  @font-face {
+    font-family: Slidefu;
+    src: local('Slidefu'), url(./assets/fonts/Slidefu-Regular-2.ttf) format('truetype');
+  }
+  ```
+
+  Use the font int App.module.css
+
+  ```css
+  h1 {
+    font-family: 'Slidefu';
+    font-size: 72px;
+  }
+  ```
+
+  App.tsx
+
+  ```tsx
+  <h1>React-Typescript-Travelling</h1>
+  ```
+
+  <img src="https://markdown-res.oss-cn-hangzhou.aliyuncs.com/mdImgs/2022/12/05/20221205222500.png" alt="image-20221205222457714" style="zoom:50%;" />
 
   
