@@ -1,4 +1,4 @@
-# React-Typtscript-Travelling
+# React-Typescript-Travelling
 
 ## React with Typescript
 
@@ -60,6 +60,16 @@ npx create-react-app react-ts-travelling --template typescript
 
 
 ## Thinking in React
+
+### React history
+
+
+
+### React success reason
+
+
+
+### Thinking in React
 
 Modules in React
 
@@ -147,5 +157,38 @@ Modules in React
   ```
 
   <img src="https://markdown-res.oss-cn-hangzhou.aliyuncs.com/mdImgs/2022/12/05/20221205222500.png" alt="image-20221205222457714" style="zoom:50%;" />
+
+
+
+
+- Components Demo
+
+  ```typescript
+  import React from "react";
+  
+  const Robot = () => {
+    return <></>;
+  };
+  export default Robot;
+  ```
+
+  Each coms transfer datas with porps, like this:
+
+  FC: functional component 函数式组件
+
+  ```tsx
+  interface RobotProps {
+      id: number;
+      name: string;
+      email: string;
+  };
+  const Robot : React.FC<RobotProps> = (props) => {
+    const {id, name, email} = props;
+    return (
+    	<div>
+      </div>
+    );
+  }
+  ```
 
   
