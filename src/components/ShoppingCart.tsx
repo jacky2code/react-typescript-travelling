@@ -9,6 +9,7 @@
 import React from "react";
 
 import styles from "./ShoppingCart.module.css";
+import { FiShoppingCart } from "react-icons/fi";
 
 // 组件参数
 interface Props {}
@@ -19,7 +20,7 @@ interface State {
 }
 
 class ShoppingCart extends React.Component<Props, State> {
-  // 生命周期第一阶段：初始化
+  // * 生命周期第一阶段：初始化
   // 初始化组件 state
   constructor(props: Props) {
     super(props);
@@ -28,17 +29,17 @@ class ShoppingCart extends React.Component<Props, State> {
     };
   }
 
+  handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    // 操作下拉菜单打开/关闭
+    this.setState({ isOpen: !this.state.isOpen });
+  };
+
   render() {
     return (
       <div className={styles.cardContainer}>
-        <button
-          className={styles.button}
-          onClick={() => {
-            // 操作下拉菜单打开/关闭
-            this.setState({ isOpen: !this.state.isOpen });
-          }}
-        >
-          购物车 2 (件)
+        <button className={styles.button} onClick={this.handleClick}>
+          <FiShoppingCart />
+          <span>购物车 2 (件)</span>
         </button>
         <div
           className={styles.cartDropDown}
