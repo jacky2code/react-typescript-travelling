@@ -192,3 +192,74 @@ Modules in React
   ```
 
   
+#### State & Props
+
+- State and Props 区别
+
+  props 是组件对外的接口，而state是组件对内的接口；props 用于组件间数据传递，而state 用于组件内部的数据传递
+
+  ```typescript
+  // 组件参数
+  interface Props {}
+  // 组件状态
+  interface State {
+    // 下拉菜单打开状态
+    isOpen: boolean;
+  }
+  ```
+
+  
+
+- 初始化
+
+  构建函数 constructor 是唯一可以初始化state的地方
+
+  ```tsx
+  // * 生命周期第一阶段：初始化
+  // 初始化组件 state
+  constructor(props: Props) {
+    super(props);
+    this.state = {
+      isOpen: false,
+    };
+  }
+  ```
+
+  
+
+- state 正确的打开方式
+
+  state 是私有的，可以认为state 是组件的‘私有属性’
+
+  用 setState() 修改 state
+
+  ```tsx
+  onClick={() => {
+      // 操作下拉菜单打开/关闭
+      this.setState({ isOpen: !this.state.isOpen });
+    }}
+  ```
+
+  
+  
+- State 的更新是异步的
+
+  调用 setState后，state不会立刻改变，是异步操作；不要依赖当前的State，计算下个State
+
+- Props
+
+  本质上，props就是传入函数的参数，是从传入组件内部的数据。更准确的说，是从父组件传递向子组件的数据。  
+
+- Props 用法
+
+  ```tsx
+  <div className={styles.robotList}>
+          {robots.map((r) => (
+            <Robot id={r.id} name={r.name} email={r.email} />
+          ))}
+        </div>
+  ```
+
+  
+
+  

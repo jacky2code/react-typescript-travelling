@@ -19,6 +19,8 @@ interface State {
 }
 
 class ShoppingCart extends React.Component<Props, State> {
+  // 生命周期第一阶段：初始化
+  // 初始化组件 state
   constructor(props: Props) {
     super(props);
     this.state = {
@@ -40,7 +42,7 @@ class ShoppingCart extends React.Component<Props, State> {
         </button>
         <div
           className={styles.cartDropDown}
-        // 下拉菜单是否打开
+          // 下拉菜单是否打开
           style={{ display: this.state.isOpen ? "block" : "none" }}
         >
           <ul>
