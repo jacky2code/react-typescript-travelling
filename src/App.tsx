@@ -11,6 +11,7 @@ import robots from './datas/robots.json'
 import Robot from './components/Robot';
 import styles from './App.module.css';
 import logo  from "./assets/images/logo.svg";
+import ShoppingCart from './components/ShoppingCart';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <img src={logo} className={styles.appLogo} alt='logo'/>
         <h1>React-Typescript-Travelling</h1>
       </div>
+      <ShoppingCart />
       <div className={styles.robotList}>
         {robots.map((r) => (
           <Robot id={r.id} name={r.name} email={r.email} />
