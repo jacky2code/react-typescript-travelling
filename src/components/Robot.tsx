@@ -6,8 +6,9 @@
  * @Description: 机器人组件
  * @TODO:
  */
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./Robot.module.css";
+import { appContext } from "..";
 
 interface RobotProps {
   id: number;
@@ -17,11 +18,13 @@ interface RobotProps {
 
 const Robot: React.FC<RobotProps> = (props) => {
   const { id, name, email } = props;
+  const value = useContext(appContext);
   return (
     <div className={styles.cardContainer}>
       <img alt="robot" src={`https://robohash.org/${id}`} />
       <h2>{name}</h2>
       <p>{email}</p>
+      <p>author: {value.username}</p>
     </div>
   );
 };
